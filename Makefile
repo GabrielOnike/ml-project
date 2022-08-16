@@ -14,9 +14,9 @@ setup:
 install:
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
-		pip install -r requirements.txt &&\
-	wget -O ~/.devops/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-		sudo chmod +x ~/.devops/bin/hadolint &&\
+		wget -O ./hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		sudo chmod +x ./hadolint &&\
+		pip install -r requirements.txt
 	# Above ive Added Install Hadolint:fetch Hadolint and install it in the local directory. Not needed if its installed locally, i.e. global but rqd for proper containerization 
 	# Please make sure that you are installing it in the local directory instead of attempting to install it in the bin folder which will require administrator access		
 
