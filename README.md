@@ -58,7 +58,7 @@ source .ml-project/bin/activate
 
 ### Other Important Commands - from Shell/Bash Terminal
 * Make all `activating makefile`
-* ./run_docker.sh OR sh run_docker.sh | ./run_kubernetes.sh | upload_docker.sh  `runs docker, runs kubernetes and uploading docjer commands`
+* ./run_docker.sh OR sh run_docker.sh | ./run_kubernetes.sh | upload_docker.sh  `runs docker, runs kubernetes and uploading docker commands`
 
 
 ### REFERENCES
