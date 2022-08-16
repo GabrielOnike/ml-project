@@ -16,8 +16,8 @@ install:
 		pip install -r requirements.txt\
 	# Below ive Added Install Hadolint -fetch Hadolint and install it in the local directory. Not needed if its installed locally-global but rqd for proper containerization 
 	# Please make sure that you are installing it in the local directory instead of attempting to install it in the bin folder which will require administrator access
-	wget -O ./devops https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-		chmod +x ./devops	
+	wget -O ./bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		chmod +x ./bin/hadolint	
 
 test:
 	# Additional, optional, tests could go here
@@ -29,7 +29,7 @@ lint:
 	# This is linter for Dockerfiles
 	# hadolint Dockerfile <- for local only
 	# Since the above command will install hadolint in the current directory I run it below from the current directory
-	./devops Dockerfile
+	./bin/hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1202 app.py 
