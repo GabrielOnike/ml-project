@@ -17,7 +17,7 @@ install:
 	# Below ive Added Install Hadolint -fetch Hadolint and install it in the local directory. Not needed if its installed locally-global but rqd for proper containerization 
 	# Please make sure that you are installing it in the local directory instead of attempting to install it in the bin folder which will require administrator access
 	wget -O ./devops https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-	chmod +x ./haddevopsolint	
+		chmod +x ./devops	
 
 test:
 	# Additional, optional, tests could go here
