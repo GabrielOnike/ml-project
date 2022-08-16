@@ -9,11 +9,12 @@ setup:
 	# Create python virtualenv & source it
 	# source ~/.devops/bin/activate
 	python3 -m venv ~/.devops
+	source ~/.devops/bin/activate
 
 install:
 	# This should be run from inside a virtualenv
-	wget -O ./bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
-		chmod +x ./bin/hadolint &&\
+	wget -O ./devops/bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&\
+		chmod +x ./devops/bin/hadolint &&\
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt\
 	# Above ive Added Install Hadolint:fetch Hadolint and install it in the local directory. Not needed if its installed locally, i.e. global but rqd for proper containerization 
